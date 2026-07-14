@@ -84,7 +84,7 @@ Create a Postman environment and add a variable named `base_url`.
 | Environment | `base_url` value |
 | --- | --- |
 | Local | `http://127.0.0.1:8000` |
-| Deployed | `https://your-render-service.onrender.com` |
+| Deployed | `https://fastapi-notesapi.onrender.com` |
 
 Also add empty variables named `access_token`, `refresh_token`, and `note_id`. Use `{{base_url}}` in every request URL below.
 
@@ -100,9 +100,9 @@ Select **Body** → **raw** → **JSON**, then send:
 
 ```json
 {
-  "name": "Bishal",
-  "username": "bishal",
-  "email": "bishal@example.com",
+  "name": "user",
+  "username": "user",
+  "email": "user@example.com",
   "h_pwd": "a-strong-password"
 }
 ```
@@ -121,7 +121,7 @@ Select **Body** → **x-www-form-urlencoded** and add:
 
 | Key | Value |
 | --- | --- |
-| `username` | `bishal` or `bishal@example.com` |
+| `username` | `user` or `user@example.com` |
 | `password` | `a-strong-password` |
 
 The response contains `access_token` and `refresh_token`. In the request's **Tests** tab, add this script to save them automatically:
